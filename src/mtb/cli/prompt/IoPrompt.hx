@@ -1,4 +1,4 @@
-package tink.cli.prompt;
+package mtb.cli.prompt;
 
 import haxe.io.Bytes;
 import tink.Stringly;

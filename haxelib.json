@@ -1,5 +1,5 @@
 {
-	"name": "tink_cli",
+	"name": "mtb_cli",
 	"license": "MIT",
 	"tags": [
 		"cross",
@@ -7,12 +7,12 @@
 	],
 	"classPath": "src",
 	"contributors": [
-		"kevinresol",
-		"back2dos"
+		"melMass"
 	],
-	"releasenote": "Fixed deploy script",
-	"version": "0.4.1",
-	"url": "https://github.com/haxetink/tink_cli/",
+
+	"releasenote": "Initial Fork",
+	"version": "0.1.0",
+	"url": "https://github.com/mtb-tools/tink_cli",
 	"dependencies": {
 		"tink_io": "",
 		"tink_stringly": "",

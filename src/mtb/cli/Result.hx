@@ -1,4 +1,4 @@
-package tink.cli;
+package mtb.cli;
 
 using tink.CoreApi;
 

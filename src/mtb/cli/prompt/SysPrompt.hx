@@ -1,4 +1,4 @@
-package tink.cli.prompt;
+package mtb.cli.prompt;
 
 import tink.io.Worker;
 import tink.Stringly;

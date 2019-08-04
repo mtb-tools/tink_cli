@@ -1,4 +1,4 @@
-package tink.cli;
+package mtb.cli;
 
 import tink.Stringly;
 using tink.CoreApi;

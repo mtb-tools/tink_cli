@@ -1,4 +1,4 @@
-package tink.cli.doc;
+package mtb.cli.doc;
 
 import tink.cli.DocFormatter;
 

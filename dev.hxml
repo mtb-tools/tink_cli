@@ -3,7 +3,7 @@ tests.hxml
 -js bin/node/tests.js
 
 -lib hxnodejs
--lib tink_cli
+-lib mtb_cli
 -lib tink_unittest
 -lib travix
 

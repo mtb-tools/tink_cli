@@ -1,4 +1,4 @@
-package tink.cli;
+package mtb.cli;
 
 @:forward
 abstract Rest<T>(Array<T>) from Array<T> to Array<T> {

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-haxe -lib tink_cli --run Haxe $@
+haxe -lib mtb_cli --run Haxe $@

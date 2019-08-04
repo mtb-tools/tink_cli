@@ -1,4 +1,4 @@
-package tink.cli.prompt;
+package mtb.cli.prompt;
 
 typedef DefaultPrompt = 
 #if nodejs

@@ -1,4 +1,4 @@
-package tink.cli;
+package mtb.cli;
 
 interface DocFormatter<T> {
 	function format(spec:DocSpec):T;
