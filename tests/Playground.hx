@@ -1,7 +1,7 @@
 package;
 
-import tink.Cli;
-import tink.cli.Prompt;
+import mtb.cli;
+import mtb.cli.Prompt;
 
 using tink.CoreApi;
 

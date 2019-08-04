@@ -58,7 +58,7 @@ class Macro {
 			var clsname = 'Doc' + getCounter(type);
 			var def = macro class $clsname {
 				
-				static var doc:tink.cli.DocFormatter.DocSpec;
+				static var doc:mtb.cli.DocFormatter.DocSpec;
 				
 				public static function get() {
 					if(doc == null)
@@ -73,7 +73,7 @@ class Macro {
 				}
 			}
 			
-			def.pack = ['tink', 'cli'];
+			def.pack = ['mtb', 'cli'];
 			
 			Context.defineType(def);
 			
@@ -185,13 +185,13 @@ class Macro {
 		if(path[path.length - 1] != cls.name) path.push(cls.name);
 		var ct = TPath(path.join('.').asTypePath());
 		var clsname = 'Router' + getCounter(type);
-		var def = macro class $clsname extends tink.cli.Router<$ct> {
+		var def = macro class $clsname extends mtb.cli.Router<$ct> {
 			
 			public function new(command, prompt) {
 				super(command, prompt, $v{info.flags.length > 0});
 			}
 			
-			override function process(args:Array<String>):tink.cli.Result {
+			override function process(args:Array<String>):mtb.cli.Result {
 				return ${ESwitch(macro args[0], cmdCases, defCommandCall).at()}
 			}
 			
@@ -217,13 +217,13 @@ class Macro {
 		}
 		
 		def.fields = def.fields.concat(fields);
-		def.pack = ['tink', 'cli'];
+		def.pack = ['mtb', 'cli'];
 		
 		if(info.aliasDisabled) def.fields.remove(def.fields.find(function(f) return f.name == 'processAlias'));
 		
 		Context.defineType(def);
 		
-		return TPath('tink.cli.$clsname'.asTypePath());
+		return TPath('mtb.cli.$clsname'.asTypePath());
 	}
 	
 	static function preprocess(type:Type, pos:Position):ClassInfo {
@@ -407,7 +407,7 @@ class Macro {
 					name: 'args',
 					type: macro:Array<tink.Stringly>,
 				}],
-				ret: macro:tink.cli.Result,
+				ret: macro:mtb.cli.Result,
 				expr: buildCommandForwardCall(command),
 			}),
 			pos: command.field.pos,
@@ -418,7 +418,7 @@ class Macro {
 		var name = command.field.name;
 		var pos = command.field.pos;
 		return if(command.isSub) {
-			macro return tink.Cli.process(args, command.$name);
+			macro return mtb.cli.process(args, command.$name);
 		} else {
 			function process(type:Type) {
 				return switch type {
@@ -435,12 +435,12 @@ class Macro {
 								for(i in 0...args.length) {
 									var arg = args[i];
 									switch arg.t.reduce() {
-										case TAbstract(_.get() => {pack: ['tink', 'cli'], name: 'Rest'}, _):
+										case TAbstract(_.get() => {pack: ['mtb', 'cli'], name: 'Rest'}, _):
 											if(restLocation != -1) command.field.pos.makeFailure('A command can only accept at most one Rest<T> argument').sure();
 											requiredParams--;
 											restLocation = i;
 											
-										case _.getID() => 'tink.cli.Prompt':
+										case _.getID() => 'mtb.cli.Prompt':
 											if(promptLocation != -1)  command.field.pos.makeFailure('A command can only accept at most one "prompt" argument').sure();
 											requiredParams--;
 											promptLocation = i;

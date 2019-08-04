@@ -3,7 +3,7 @@ package mtb.cli.prompt;
 import haxe.io.Bytes;
 import tink.Stringly;
 import tink.io.Sink;
-import tink.cli.Prompt;
+import mtb.cli.Prompt;
 
 using tink.io.Source;
 using tink.CoreApi;

@@ -1,4 +1,4 @@
 package mtb.cli.macro;
 
-@:genericBuild(tink.cli.Macro.build())
+@:genericBuild(mtb.cli.Macro.build())
 class Router<T> {}

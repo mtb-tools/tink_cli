@@ -2,7 +2,7 @@ package mtb.cli.prompt;
 
 import tink.io.Worker;
 import tink.Stringly;
-import tink.cli.Prompt;
+import mtb.cli.Prompt;
 
 using tink.CoreApi;
 

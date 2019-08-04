@@ -3,7 +3,7 @@ package mtb.cli.prompt;
 import tink.io.Sink;
 import tink.io.Source;
 import tink.Stringly;
-import tink.cli.Prompt;
+import mtb.cli.Prompt;
 import js.Node.*;
 import js.node.Buffer;
 

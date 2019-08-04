@@ -2,8 +2,8 @@ package;
 
 import tink.io.Source;
 import tink.io.Sink;
-import tink.cli.Prompt;
-import tink.cli.prompt.*;
+import mtb.cli.Prompt;
+import mtb.cli.prompt.*;
 import tink.unit.Assert.*;
 
 using tink.CoreApi;
@@ -15,7 +15,7 @@ class TestPrompt {
 	public function testBasic() {
 		var command = new PromptCommand();
 		var prompt = new FakePrompt('y\n');
-		return tink.Cli.process(['hi'], command, prompt)
+		return mtb.cli.process(['hi'], command, prompt)
 			.map(function(_) return assert('y' == command.result()));
 	}
 }

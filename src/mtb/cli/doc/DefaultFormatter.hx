@@ -1,6 +1,6 @@
 package mtb.cli.doc;
 
-import tink.cli.DocFormatter;
+import mtb.cli.DocFormatter;
 
 using Lambda;
 using StringTools;

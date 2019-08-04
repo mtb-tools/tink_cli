@@ -1,7 +1,7 @@
 package;
 
-import tink.cli.*;
-import tink.Cli;
+import mtb.cli.*;
+import mtb.cli;
 
 class Example {
 	static function main() {

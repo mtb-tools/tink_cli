@@ -182,7 +182,7 @@ and then you can later obtain it back from a command's function like so:
 
 ```haxe
 @:command
-public function run(prompt:tink.cli.Prompt) {
+public function run(prompt:mtb.cli.Prompt) {
 	prompt.prompt('Input your name: ').handle(...);
 }
 ```

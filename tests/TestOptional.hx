@@ -1,8 +1,8 @@
 package;
 
-import tink.Cli;
-import tink.cli.*;
-import tink.cli.prompt.*;
+import mtb.cli;
+import mtb.cli.*;
+import mtb.cli.prompt.*;
 import tink.io.Sink;
 import tink.unit.Assert.*;
 import haxe.ds.StringMap;
