@@ -1,8 +1,8 @@
+# THIS IS A FORK OF [tink_cli](https://github.com/haxetink/tink_cli) from [Kevin Leung](https://github.com/kevinresol)
+
 # mtb_cli
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/haxetink/public)
-
-Write command line tools with ~~ease~~ Haxe.
+Haxe command line tools with Haxe.
 
 ## Usage
 

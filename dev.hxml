@@ -8,3 +8,5 @@ tests.hxml
 -lib travix
 
 -dce full
+
+-cmd node bin/node/tests.js
